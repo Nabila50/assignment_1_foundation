@@ -52,4 +52,23 @@ const validateUsername = (userName) =>{
     }
 }
 
-console.log(validateUsername("Arahim islam"))
+// console.log(validateUsername("Arahim islam"))
+
+
+// * Question_4
+
+function getCngFare(distance, isNight=false, waitingMinutes= 0){
+    let fare = 50;
+
+    if(distance > 2){
+        fare = fare + (distance-2) * 15
+    }
+
+    fare = fare + waitingMinutes * 2;
+
+    if(isNight){
+        fare = fare + (fare*20)/100;
+    }
+
+    return `total CNG Fare is : ${fare} taka`;
+}
