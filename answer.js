@@ -1,39 +1,35 @@
 // * Question_1:
 
 
-// const describeValue = (value) =>{
-//     const valueTypes = typeof value;
-//     const booleanValues = value ? "truthy" : "falsy";
+const describeValue = (value) =>{
+    const valueTypes = typeof value;
+    const booleanValues = value ? "truthy" : "falsy";
 
-//     return `"${valueTypes} | ${booleanValues}"`;
-// }
-
-
-// console.log(describeValue(null))
+    return `"${valueTypes} | ${booleanValues}"`;
+}
 
 
 // * Question_2
 
-// const getDayType = (day)=>{
-//     switch (day.toLowerCase()) {
-//         case "friday":
-//         case "saturday":
+const getDayType = (day)=>{
+    switch (day.toLowerCase()) {
+        case "friday":
+        case "saturday":
 
-//             return "Weekend";
+            return "Weekend";
 
-//         case "monday":
-//         case "tuesday":
-//         case "wednesday":
-//         case "thursday":
-//             return "Working Day";
+        case "monday":
+        case "tuesday":
+        case "wednesday":
+        case "thursday":
+            return "Working Day";
 
-//         default:
-//             return "Invalid Day";
+        default:
+            return "Invalid Day";
            
-//     }
-// }
+    }
+}
 
-// console.log(getDayType("Monday"))
 
 // * Question_3
 
@@ -52,8 +48,6 @@ const validateUsername = (userName) =>{
     }
 }
 
-// console.log(validateUsername("Arahim islam"))
-
 
 // * Question_4
 
@@ -71,4 +65,34 @@ function getCngFare(distance, isNight=false, waitingMinutes= 0){
     }
 
     return `total CNG Fare is : ${fare} taka`;
+}
+
+
+// * Question_5
+
+const getChaseVerdict = (target, scored, ballsLeft) =>{
+
+    const runsNeeded = target - scored;
+
+    if(runsNeeded <= 0){
+        return "Won";
+    }
+
+    if(ballsLeft <= 0){
+        return "Lost"
+    }
+
+    const requiredRate = (runsNeeded / ballsLeft) * 6;
+
+    let verdict;
+
+    if(requiredRate <= 6) {
+        verdict = "Comfortable"
+    } else if (requiredRate >=6 && requiredRate <= 12){
+        verdict = "Tough";
+    } else{
+        verdict = "Almost Impossible"
+    }
+
+    return `Need ${runsNeeded} runs in ${ballsLeft} balls | ${verdict}`
 }
