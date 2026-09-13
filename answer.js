@@ -5,9 +5,10 @@ const describeValue = (value) =>{
     const valueTypes = typeof value;
     const booleanValues = value ? "truthy" : "falsy";
 
-    return `"${valueTypes} | ${booleanValues}"`;
+    return `${valueTypes} | ${booleanValues}`;
 }
 
+console.log(describeValue(10));
 
 // * Question_2
 
@@ -38,7 +39,7 @@ const validateUsername = (userName) =>{
         return ("Too Short")
 
     } else if( userName.includes(" ")){
-        return "No Spance Allowed!"
+        return "No Space Allowed"
 
     }else if(userName.toLowerCase().includes("admin")){
         return "Reserved Word"
@@ -47,6 +48,7 @@ const validateUsername = (userName) =>{
         return "Available"
     }
 }
+
 
 
 // * Question_4
@@ -64,9 +66,9 @@ function getCngFare(distance, isNight=false, waitingMinutes= 0){
         fare = fare + (fare*20)/100;
     }
 
-    return `total CNG Fare is : ${fare} taka`;
+    return `${fare}`;
 }
-
+ console.log(getCngFare(5, true, 10))
 
 // * Question_5
 
