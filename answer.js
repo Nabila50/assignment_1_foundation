@@ -8,7 +8,6 @@ const describeValue = (value) =>{
     return `${valueTypes} | ${booleanValues}`;
 }
 
-console.log(describeValue(10));
 
 // * Question_2
 
