@@ -67,7 +67,7 @@ function getCngFare(distance, isNight=false, waitingMinutes= 0){
 
     return `${fare}`;
 }
- console.log(getCngFare(5, true, 10))
+ 
 
 // * Question_5
 
